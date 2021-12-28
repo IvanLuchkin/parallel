@@ -9,9 +9,9 @@ fun main(args: Array<String>) {
 
     for (i in 0..9) {
         if (i % 2 == 0) {
-            Thread(Test1(mutex1)).start()
+            Thread(Part1(mutex1)).start()
         } else {
-            Thread(Test1(mutex2)).start()
+            Thread(Part1(mutex2)).start()
         }
     }
 
@@ -26,7 +26,7 @@ fun main(args: Array<String>) {
     }*/
 }
 
-internal class Test1(
+internal class Part1(
     private val mutex: Mutex
 ) : Runnable {
     override fun run() {
