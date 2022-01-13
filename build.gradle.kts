@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     kotlin("jvm") version "1.5.10"
     application
@@ -12,12 +10,6 @@ repositories {
     mavenCentral()
 }
 
-
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "16"
-}
-
-application {
-    mainClass.set("MainKt")
+dependencies {
+    implementation("com.typesafe.akka:akka-actor_3:2.6.17")
 }
